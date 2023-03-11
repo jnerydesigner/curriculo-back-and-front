@@ -1,18 +1,18 @@
 import { IconBaseProps } from "react-icons";
 import { Container, ContainerIcon } from "./styles";
+import { HTMLProps } from "react";
 
-import { MdHome } from "react-icons/md";
-
-interface PropsButton {
+interface PropsButton extends HTMLProps<HTMLButtonElement> {
   title: string;
   last?: boolean;
   first?: boolean;
   icon?: IconBaseProps;
+  click?: () => void;
 }
 
-export function ButtonNavi({ title, icon }: PropsButton) {
+export function ButtonNavi({ title, icon, click }: PropsButton) {
   return (
-    <Container>
+    <Container onClick={click}>
       <ContainerIcon>
         <>{icon}</>
       </ContainerIcon>
