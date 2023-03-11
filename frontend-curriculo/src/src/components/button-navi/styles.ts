@@ -1,7 +1,9 @@
 import { ButtonBaseProps } from "@mui/material";
 import styled from "styled-components";
 
-export const Container = styled.div<ButtonBaseProps>`
+export const Container = styled.button`
+  outline: 0;
+  border: 0;
   width: 100%;
   height: 40px;
   border-radius: 8px;

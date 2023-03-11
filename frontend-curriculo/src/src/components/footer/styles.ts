@@ -11,5 +11,6 @@ export const Container = styled.div`
   background-color: #2d3436;
   h2 {
     color: #fff;
+    font-size: 16px;
   }
 `;

@@ -14,8 +14,18 @@ import {
   MdOutlineArticle,
 } from "react-icons/md";
 import { HiOutlineCalculator } from "react-icons/hi";
+import { Navigate, Link, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { VariableContext } from "../../context/VariablesContext";
+import { createPageName } from "../../utils/CreatePageName";
 
 export const Navbar: React.FC = () => {
+  const { routeName, toggleRouteName } = useContext(VariableContext);
+  const navigate = useNavigate();
+  function handleClickNavigator(page: string): void | undefined {
+    toggleRouteName(createPageName(page));
+    navigate(page);
+  }
   return (
     <Container>
       <ImageProfile>
@@ -28,11 +38,31 @@ export const Navbar: React.FC = () => {
 
       <MenuProfile>
         <MenuButtons>
-          <ButtonNavi title="Perfil" icon={<MdHome />} />
-          <ButtonNavi title="Experiência" icon={<MdOutlineVerifiedUser />} />
-          <ButtonNavi title="Estágios" icon={<MdOutlineHandshake />} />
-          <ButtonNavi title="Formação" icon={<HiOutlineCalculator />} />
-          <ButtonNavi title="Portifolio" icon={<MdOutlineArticle />} />
+          <ButtonNavi
+            title="Perfil"
+            icon={<MdHome />}
+            click={() => handleClickNavigator("/")}
+          />
+          <ButtonNavi
+            click={() => handleClickNavigator("experience")}
+            title="Experiência"
+            icon={<MdOutlineVerifiedUser />}
+          />
+          <ButtonNavi
+            click={() => handleClickNavigator("stage")}
+            title="Estágios"
+            icon={<MdOutlineHandshake />}
+          />
+          <ButtonNavi
+            click={() => handleClickNavigator("formation")}
+            title="Formação"
+            icon={<HiOutlineCalculator />}
+          />
+          <ButtonNavi
+            click={() => handleClickNavigator("portfolio")}
+            title="Portifolio"
+            icon={<MdOutlineArticle />}
+          />
         </MenuButtons>
       </MenuProfile>
     </Container>
