@@ -34,6 +34,7 @@ export const Navbar: React.FC = () => {
         </ContainerImg>
         <h2>Currículo</h2>
         <h3>Desenvolvedor de Back End</h3>
+        <h3>Jander da Costa Nery</h3>
       </ImageProfile>
 
       <MenuProfile>
@@ -64,6 +65,12 @@ export const Navbar: React.FC = () => {
             icon={<MdOutlineArticle />}
           />
         </MenuButtons>
+
+        <div>
+          <div>
+            <p>Redes Sociais</p>
+          </div>
+        </div>
       </MenuProfile>
     </Container>
   );

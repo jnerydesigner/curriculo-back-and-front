@@ -10,7 +10,7 @@ import {
 import { VariableContext } from "../../context/VariablesContext";
 
 export const Header: React.FC = () => {
-  const { routeName, toggleRouteName } = useContext(VariableContext);
+  const { routeName } = useContext(VariableContext);
   return (
     <Container>
       <ContainerTitle>

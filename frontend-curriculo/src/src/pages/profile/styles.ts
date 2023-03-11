@@ -9,5 +9,5 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #e74c3c;
+  background-color: #2d3436;
 `;

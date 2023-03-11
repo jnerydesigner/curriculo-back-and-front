@@ -58,3 +58,9 @@ export const MenuButtons = styled.div`
   height: 100%;
   padding: 10px 20px;
 `;
+export const ContainerSocialMedias = styled.div`
+width: : 100%;
+height: 100%;
+
+
+`;
