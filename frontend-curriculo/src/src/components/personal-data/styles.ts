@@ -10,7 +10,7 @@ export const Container = styled.div`
 `;
 
 export const MenuPersonal = styled.ul`
-  width: 50%;
+  width: 70%;
   height: 100%;
   list-style: none;
 
