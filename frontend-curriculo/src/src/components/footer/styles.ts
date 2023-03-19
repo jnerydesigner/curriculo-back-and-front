@@ -5,12 +5,16 @@ export const Container = styled.div`
   height: 10vh;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #2d3436;
+
   h2 {
     color: #fff;
     font-size: 16px;
+  }
+  h3 {
+    color: azure;
+    font-size: 12px;
   }
 `;

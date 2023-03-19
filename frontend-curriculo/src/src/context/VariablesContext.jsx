@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const VariableContext = createContext();
 
 export const VariableProvider = ({ children }) => {
-  const [routeName, setRouteName] = useState("home");
+  const [routeName, setRouteName] = useState("Perfil");
 
   const toggleRouteName = (route) => {
     setRouteName(route)

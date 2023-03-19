@@ -1,9 +1,8 @@
-import { Content } from "../components/content";
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
 import { Navbar } from "../components/navbar";
 import { Container, ContainerGeral, ContainerNavbar } from "./styles";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Profile } from "../pages/profile";
 import { Experience } from "../pages/experience";
 import { Stage } from "../pages/stage";

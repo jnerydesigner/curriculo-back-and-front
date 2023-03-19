@@ -14,14 +14,16 @@ import {
   MdOutlineArticle,
 } from "react-icons/md";
 import { HiOutlineCalculator } from "react-icons/hi";
-import { Navigate, Link, useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { useContext} from "react";
 import { VariableContext } from "../../context/VariablesContext";
 import { createPageName } from "../../utils/CreatePageName";
 
 export const Navbar: React.FC = () => {
-  const { routeName, toggleRouteName } = useContext(VariableContext);
+  const { toggleRouteName } = useContext(VariableContext);
   const navigate = useNavigate();
+
+
   function handleClickNavigator(page: string): void | undefined {
     toggleRouteName(createPageName(page));
     navigate(page);
@@ -66,11 +68,7 @@ export const Navbar: React.FC = () => {
           />
         </MenuButtons>
 
-        <div>
-          <div>
-            <p>Redes Sociais</p>
-          </div>
-        </div>
+ 
       </MenuProfile>
     </Container>
   );

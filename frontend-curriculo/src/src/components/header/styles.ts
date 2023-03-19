@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 10vh;
-  background-color: #2d3436;
   border-bottom: 2px solid #8257e5;
   display: flex;
   flex-direction: row;
@@ -28,7 +27,6 @@ export const ContainerLogin = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #2d3436;
 
   img {
     width: 30px;
@@ -36,6 +34,8 @@ export const ContainerLogin = styled.div`
   }
 `;
 
+
+// to-do
 export const LinkLogin = styled.a`
   background-color: transparent;
   display: block;

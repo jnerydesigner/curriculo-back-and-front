@@ -4,13 +4,11 @@ export const Container = styled.div`
   width: 420px;
   height: 100vh;
   border-right: 2px solid #8257e5;
-  background-color: #34334d;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #2d3436;
 `;
 
 export const MenuProfile = styled.div`
@@ -24,7 +22,7 @@ export const MenuProfile = styled.div`
 `;
 
 export const ImageProfile = styled.div`
-  width: 420px;
+  width: 460px;
   height: 40vh;
 
   display: flex;
@@ -44,12 +42,53 @@ export const ContainerImg = styled.div`
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 2px solid #8257e5;
+  background: rgba(0,0,0,0.5);
+  position: relative;
+  overflow: hidden;
+  ::before{
+    content: '';
+    position: absolute;
+    inset: -10px 80px;
+    background: linear-gradient(315deg, #00ccff, #d400d4);
+    transition: 0.5s;
+    animation: animate 4s linear infinite;
+    filter: blur(4px)
+  }
+
+  ::after{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #34334D;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  @keyframes animate {
+    0% 
+    {
+      transform: rotate(0deg);
+    }
+    0% 
+    {
+      transform: rotate(360deg);
+    }
+  }
+  :hover::before{
+    inset: -10px 10px;
+  }
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   img {
-    width: 100%;
-    height: 100%;
+    width: 97%;
+    height: 97%;
     border-radius: 50%;
+    z-index: 10;
   }
 `;
 
@@ -59,8 +98,6 @@ export const MenuButtons = styled.div`
   padding: 10px 20px;
 `;
 export const ContainerSocialMedias = styled.div`
-width: : 100%;
-height: 100%;
-
-
+  width: 100%;
+  height: 100%;
 `;
